@@ -14,6 +14,7 @@ class Feed < ActiveRecord::Base
     end
     website = website.split('/')[0]
     website.sub!('www.', '') if website.starts_with?('www')
+    website
   end
 
   def displayed_time
