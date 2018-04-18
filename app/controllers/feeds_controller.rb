@@ -6,7 +6,7 @@ class FeedsController < ApplicationController
   def next_page
     response = if params[:page]
       next_page = params[:page].to_i + 1
-      Feed.page(next_page)
+      Feed.page(next_page).to_json(:methods => [:displayed_website, :displayed_time])
     else
       {}
     end
