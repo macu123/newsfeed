@@ -1,6 +1,7 @@
-<div class='container'>
+<div class='container' style='background-color: #f6f6ef'>
   <%= render partial: '/shared/feed', locals: {feed: @feed} %>
-
+  <br>
+  <br>
   <% @comments.each do |comment| %>
     <div>
       <p>
