@@ -1,7 +1,9 @@
-<h1>Feeds#index</h1>
-<% @feeds.each do |feed| %>
-<div>
-  <p><%= link_to feed.title, feed.url %>(<%= feed.displayed_website %>)</p>
-  <p><%= feed.score %> points by <%= feed.created_by %> <%= feed.displayed_time %> | hide | <%= feed.comments_count %>></p>
+<h1>Hacker News</h1>
+<div id='scroll-content'>
+  <% @feeds.each do |feed| %>
+    <div>
+      <p><%= link_to feed.title, feed.url %>(<%= feed.displayed_website %>)</p>
+      <p><%= feed.score %> points by <%= feed.created_by %> <%= feed.displayed_time %> | hide | <%= feed.comments_count %></p>
+    </div>
+  <% end %>
 </div>
-<% end %>
