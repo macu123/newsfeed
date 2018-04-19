@@ -38,7 +38,11 @@ checkForNewDiv = ->
             feed_para.innerHTML += '(' + feed_obj.displayed_website + ')'
             feed_div.appendChild feed_para
             feed_para = document.createElement('p')
-            feed_para.innerHTML = feed_obj.score + ' points by ' + feed_obj.created_by + feed_obj.displayed_time + ' | hide | ' + feed_obj.comments_count
+            feed_para.innerHTML = feed_obj.score + ' points by ' + feed_obj.created_by + feed_obj.displayed_time + ' | hide | '
+            comments_link = document.createElement('a')
+            comments_link.href = '/feeds/' + feed_obj.id + '/comments'
+            comments_link.innerHTML = feed_obj.comments_count + ' comments'
+            feed_para.appendChild comments_link
             feed_div.appendChild feed_para
             document.getElementById('scroll-content').appendChild feed_div
             i++
