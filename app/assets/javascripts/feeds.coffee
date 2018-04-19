@@ -11,6 +11,7 @@ document.addEventListener 'scroll', ->
 
 checkForNewDiv = ->
   last_div = document.querySelector('#scroll-content > div:last-child')
+  return if !last_div
   last_div_offset = last_div.offsetTop + last_div.clientHeight
   page_offset = window.pageYOffset + window.innerHeight
   if page_offset > last_div_offset - 10
