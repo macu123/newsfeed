@@ -1,4 +1,4 @@
-== README
-### Newsfeed for Hacker News
+
+== Newsfeed for Hacker News
 
 Link: https://radiant-brushlands-59325.herokuapp.com/
