@@ -1,13 +1,9 @@
 <div id='scroll-content' class='container'>
   <h1>Hacker News</h1>
+
   <% @feeds.each do |feed| %>
-      <div>
-        <p>
-          <%= link_to feed.title, feed.url %>(<%= feed.displayed_website %>)
-        </p>
-        <p>
-          <%= feed.score %> points by <%= feed.created_by %> <%= feed.displayed_time %> | hide | <%= link_to "#{feed.comments_count} comments", feed_comments_path(feed) %>
-        </p>
-      </div>
+    <div>
+      <%= render partial: '/shared/feed', locals: {feed: feed} %>
+    </div>
   <% end %>
 </div>

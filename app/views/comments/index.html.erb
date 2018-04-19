@@ -1,5 +1,6 @@
 <div class='container'>
-  <h2>Comments for the feed</h2>
+  <%= render partial: '/shared/feed', locals: {feed: @feed} %>
+
   <% @comments.each do |comment| %>
     <div>
       <p>

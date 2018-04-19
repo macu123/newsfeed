@@ -1,0 +1,6 @@
+<p>
+  <%= link_to feed.title, feed.url %>(<%= feed.displayed_website %>)
+</p>
+<p>
+  <%= feed.score %> points by <%= feed.created_by %> <%= feed.displayed_time %> | hide | <%= link_to "#{feed.comments_count} comments", feed_comments_path(feed) %>
+</p>
